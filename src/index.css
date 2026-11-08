@@ -135,6 +135,10 @@
     padding-top: env(safe-area-inset-top);
   }
 
+  .capitalize-first::first-letter {
+    text-transform: uppercase;
+  }
+
   .pb-seguro-extra {
     padding-bottom: calc(1.25rem + env(safe-area-inset-bottom));
   }
