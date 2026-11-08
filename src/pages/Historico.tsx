@@ -15,7 +15,8 @@ import {
   YAxis,
 } from 'recharts'
 import { Cabecalho } from '../components/Cabecalho'
-import { AreaGrafico, CartaoGrafico, DicaGrafico, textoLegenda } from '../components/Grafico'
+import { AreaGrafico, CartaoGrafico, DicaGrafico } from '../components/Grafico'
+import { textoLegenda } from '../lib/legenda'
 import { KpiTile } from '../components/KpiTile'
 import { Selo } from '../components/Selo'
 import historico from '../data/historico_agregado.json'

@@ -29,9 +29,6 @@ export function AreaGrafico({ altura, descricao, children }: { altura: number; d
   )
 }
 
-/** Legenda em cor de texto neutra; a identidade da série fica no marcador colorido. */
-export const textoLegenda = (valor: unknown) => <span style={{ color: '#475569' }}>{String(valor)}</span>
-
 interface ItemDica {
   name?: unknown
   value?: unknown
