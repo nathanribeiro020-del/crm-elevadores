@@ -134,6 +134,27 @@
   .pt-seguro {
     padding-top: env(safe-area-inset-top);
   }
+
+  .pb-seguro-extra {
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom));
+  }
+
+  /* Espaço para o conteúdo não ficar atrás do menu inferior no celular */
+  .conteudo-principal {
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+  }
+
+  @media (min-width: 768px) {
+    .conteudo-principal {
+      padding-bottom: 2rem;
+    }
+  }
+
+  @media print {
+    .conteudo-principal {
+      padding-bottom: 0;
+    }
+  }
 }
 
 @keyframes surgir {
