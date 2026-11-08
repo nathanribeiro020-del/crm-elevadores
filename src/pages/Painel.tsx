@@ -2,7 +2,7 @@ import { Banknote, Building2, Filter, Gauge, MessageCircle, RefreshCcw } from 'l
 import { useMemo } from 'react'
 import { Bar, BarChart, CartesianGrid, LabelList, Legend, Tooltip, XAxis, YAxis } from 'recharts'
 import { Cabecalho } from '../components/Cabecalho'
-import { AreaGrafico, CartaoGrafico, DicaGrafico } from '../components/Grafico'
+import { AreaGrafico, CartaoGrafico, DicaGrafico, textoLegenda } from '../components/Grafico'
 import { GraficoReceita } from '../components/GraficoReceita'
 import { KpiTile } from '../components/KpiTile'
 import { PilulaStatus } from '../components/Pilula'
@@ -77,7 +77,7 @@ export default function Painel() {
               <XAxis dataKey="rotulo" tick={{ fill: COR_EIXO, fontSize: 11 }} tickLine={false} axisLine={{ stroke: COR_GRADE }} minTickGap={18} />
               <YAxis allowDecimals={false} tick={{ fill: COR_EIXO, fontSize: 11 }} tickLine={false} axisLine={false} />
               <Tooltip content={<DicaGrafico />} cursor={{ fill: '#f1f5f9' }} itemSorter={() => 0} />
-              <Legend iconType="circle" iconSize={8} itemSorter={null} wrapperStyle={{ fontSize: 12, color: '#475569' }} />
+              <Legend iconType="circle" iconSize={8} itemSorter={null} formatter={textoLegenda} wrapperStyle={{ fontSize: 12 }} />
               <Bar dataKey="novos" name="Novos" fill={COR_SERIE.principal} radius={[4, 4, 0, 0]} maxBarSize={12} />
               <Bar dataKey="renovados" name="Renovados" fill={COR_SERIE.segunda} radius={[4, 4, 0, 0]} maxBarSize={12} />
               <Bar dataKey="perdidos" name="Perdidos" fill={COR_SERIE.perda} radius={[4, 4, 0, 0]} maxBarSize={12} />

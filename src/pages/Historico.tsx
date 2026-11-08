@@ -15,7 +15,7 @@ import {
   YAxis,
 } from 'recharts'
 import { Cabecalho } from '../components/Cabecalho'
-import { AreaGrafico, CartaoGrafico, DicaGrafico } from '../components/Grafico'
+import { AreaGrafico, CartaoGrafico, DicaGrafico, textoLegenda } from '../components/Grafico'
 import { KpiTile } from '../components/KpiTile'
 import { Selo } from '../components/Selo'
 import historico from '../data/historico_agregado.json'
@@ -119,7 +119,7 @@ export default function Historico() {
               <XAxis dataKey="rotulo" tick={{ fill: COR_EIXO, fontSize: 11 }} tickLine={false} axisLine={{ stroke: COR_GRADE }} minTickGap={18} />
               <YAxis allowDecimals={false} tick={{ fill: COR_EIXO, fontSize: 11 }} tickLine={false} axisLine={false} />
               <Tooltip content={<DicaGrafico />} cursor={{ fill: '#f1f5f9' }} itemSorter={() => 0} />
-              <Legend iconType="circle" iconSize={8} itemSorter={null} wrapperStyle={{ fontSize: 12, color: '#475569' }} />
+              <Legend iconType="circle" iconSize={8} itemSorter={null} formatter={textoLegenda} wrapperStyle={{ fontSize: 12 }} />
               <Bar dataKey="novos" name="Novos" stackId="total" fill={COR_SERIE.principal} stroke="#fff" strokeWidth={1} />
               <Bar dataKey="renovacoes" name="Renovações" stackId="total" fill={COR_SERIE.segunda} stroke="#fff" strokeWidth={1} radius={[4, 4, 0, 0]} />
             </BarChart>
