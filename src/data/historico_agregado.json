@@ -1,0 +1,226 @@
+{
+  "_aviso": "Dados AGREGADOS do histórico comercial do responsável (mai/2025 a out/2026). Não contém nomes de clientes, documentos, contatos nem valores individuais. Não adicionar dados individuais a este arquivo.",
+  "periodo": {
+    "inicio": "2025-05",
+    "fim": "2026-10",
+    "meses": 18
+  },
+  "valorDosContratos": "valor total do contrato conforme planilha de origem (base anual)",
+  "totais": {
+    "contratos": 611,
+    "novos": 307,
+    "renovacoes": 304,
+    "valorTotal": 2888344.13,
+    "valorNovos": 1341004.26,
+    "valorRenovacoes": 1547339.87,
+    "ticketMedio": 4727.24,
+    "mediaContratosPorMes": 33.9,
+    "mediaNovosPorMes": 17.1
+  },
+  "porMes": [
+    {
+      "mes": "2025-05",
+      "novos": 9,
+      "renovacoes": 16,
+      "valorNovos": 39000.0,
+      "valorRenovacoes": 82300.76
+    },
+    {
+      "mes": "2025-06",
+      "novos": 13,
+      "renovacoes": 21,
+      "valorNovos": 59837.0,
+      "valorRenovacoes": 125629.85
+    },
+    {
+      "mes": "2025-07",
+      "novos": 11,
+      "renovacoes": 14,
+      "valorNovos": 38500.04,
+      "valorRenovacoes": 73807.64
+    },
+    {
+      "mes": "2025-08",
+      "novos": 10,
+      "renovacoes": 14,
+      "valorNovos": 114320.0,
+      "valorRenovacoes": 78195.96
+    },
+    {
+      "mes": "2025-09",
+      "novos": 34,
+      "renovacoes": 9,
+      "valorNovos": 127850.08,
+      "valorRenovacoes": 49485.52
+    },
+    {
+      "mes": "2025-10",
+      "novos": 17,
+      "renovacoes": 21,
+      "valorNovos": 68089.07,
+      "valorRenovacoes": 101284.44
+    },
+    {
+      "mes": "2025-11",
+      "novos": 9,
+      "renovacoes": 11,
+      "valorNovos": 34800.08,
+      "valorRenovacoes": 55818.28
+    },
+    {
+      "mes": "2025-12",
+      "novos": 19,
+      "renovacoes": 11,
+      "valorNovos": 67940.0,
+      "valorRenovacoes": 33636.42
+    },
+    {
+      "mes": "2026-01",
+      "novos": 20,
+      "renovacoes": 10,
+      "valorNovos": 67850.0,
+      "valorRenovacoes": 55884.72
+    },
+    {
+      "mes": "2026-02",
+      "novos": 20,
+      "renovacoes": 12,
+      "valorNovos": 76620.0,
+      "valorRenovacoes": 47510.2
+    },
+    {
+      "mes": "2026-03",
+      "novos": 17,
+      "renovacoes": 12,
+      "valorNovos": 68240.19,
+      "valorRenovacoes": 54038.0
+    },
+    {
+      "mes": "2026-04",
+      "novos": 20,
+      "renovacoes": 20,
+      "valorNovos": 98290.0,
+      "valorRenovacoes": 92138.13
+    },
+    {
+      "mes": "2026-05",
+      "novos": 23,
+      "renovacoes": 25,
+      "valorNovos": 79800.0,
+      "valorRenovacoes": 127147.92
+    },
+    {
+      "mes": "2026-06",
+      "novos": 10,
+      "renovacoes": 31,
+      "valorNovos": 135452.4,
+      "valorRenovacoes": 185776.53
+    },
+    {
+      "mes": "2026-07",
+      "novos": 28,
+      "renovacoes": 19,
+      "valorNovos": 97100.0,
+      "valorRenovacoes": 82008.38
+    },
+    {
+      "mes": "2026-08",
+      "novos": 17,
+      "renovacoes": 23,
+      "valorNovos": 54050.0,
+      "valorRenovacoes": 144440.76
+    },
+    {
+      "mes": "2026-09",
+      "novos": 19,
+      "renovacoes": 16,
+      "valorNovos": 62415.64,
+      "valorRenovacoes": 74571.49
+    },
+    {
+      "mes": "2026-10",
+      "novos": 11,
+      "renovacoes": 19,
+      "valorNovos": 50849.76,
+      "valorRenovacoes": 83664.87
+    }
+  ],
+  "porTipoEquipamento": [
+    {
+      "nome": "Residencial",
+      "contratos": 398,
+      "valor": 1147364.25,
+      "ticketMedio": 2882.82
+    },
+    {
+      "nome": "Comercial",
+      "contratos": 212,
+      "valor": 1735354.88,
+      "ticketMedio": 8185.64
+    },
+    {
+      "nome": "Não informado",
+      "contratos": 1,
+      "valor": 5625.0,
+      "ticketMedio": 5625.0
+    }
+  ],
+  "porEstado": [
+    {
+      "nome": "Goias",
+      "contratos": 427,
+      "valor": 2038945.28,
+      "ticketMedio": 4775.05
+    },
+    {
+      "nome": "Distrito Federal",
+      "contratos": 154,
+      "valor": 543790.86,
+      "ticketMedio": 3531.11
+    },
+    {
+      "nome": "Minas Gerais",
+      "contratos": 15,
+      "valor": 72578.87,
+      "ticketMedio": 4838.59
+    },
+    {
+      "nome": "Sao Paulo",
+      "contratos": 12,
+      "valor": 204554.0,
+      "ticketMedio": 17046.17
+    },
+    {
+      "nome": "Pernambuco",
+      "contratos": 1,
+      "valor": 8999.96,
+      "ticketMedio": 8999.96
+    },
+    {
+      "nome": "Mato Grosso",
+      "contratos": 1,
+      "valor": 13850.16,
+      "ticketMedio": 13850.16
+    },
+    {
+      "nome": "Não informado",
+      "contratos": 1,
+      "valor": 5625.0,
+      "ticketMedio": 5625.0
+    }
+  ],
+  "porZona": [
+    {
+      "nome": "Centralizado",
+      "contratos": 388,
+      "valor": 1631686.54,
+      "ticketMedio": 4205.38
+    },
+    {
+      "nome": "Descentralizado",
+      "contratos": 223,
+      "valor": 1256657.59,
+      "ticketMedio": 5635.24
+    }
+  ]
+}
