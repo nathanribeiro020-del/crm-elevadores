@@ -16,7 +16,7 @@ export function KpiTile({ rotulo, valor, detalhe, icone: Icone, alerta = false }
         <p className={`text-xs font-medium leading-snug ${alerta ? 'text-amber-900' : 'text-slate-500'}`}>{rotulo}</p>
         {IconeFinal && <IconeFinal size={16} aria-hidden="true" className={`shrink-0 ${alerta ? 'text-amber-700' : 'text-marca-500'}`} />}
       </div>
-      <p className="mt-2 text-2xl font-semibold leading-tight text-slate-900">{valor}</p>
+      <p className="mt-2 text-xl font-semibold sm:text-2xl leading-tight text-slate-900">{valor}</p>
       {detalhe && <p className={`mt-1 text-xs ${alerta ? 'text-amber-900' : 'text-slate-500'}`}>{detalhe}</p>}
     </div>
   )
