@@ -24,7 +24,7 @@ export function GraficoReceita({ serie, altura = 260, animar = true }: GraficoRe
         </defs>
         <CartesianGrid stroke={COR_GRADE} vertical={false} />
         <XAxis dataKey="rotulo" tick={{ fill: COR_EIXO, fontSize: 11 }} tickLine={false} axisLine={{ stroke: COR_GRADE }} minTickGap={18} />
-        <YAxis tickFormatter={moedaEixo} tick={{ fill: COR_EIXO, fontSize: 11 }} tickLine={false} axisLine={false} width={56} />
+        <YAxis tickFormatter={moedaEixo} tick={{ fill: COR_EIXO, fontSize: 11 }} tickLine={false} axisLine={false} width={70} />
         <Tooltip content={<DicaGrafico formatar={moeda} />} cursor={{ stroke: COR_EIXO, strokeDasharray: '3 3' }} />
         <Area
           type="monotone"

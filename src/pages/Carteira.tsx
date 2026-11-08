@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUp, Plus, Search } from 'lucide-react'
+import { ArrowDown, ArrowUp, Plus, Search, Upload } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { Cabecalho } from '../components/Cabecalho'
 import { Campo } from '../components/Campo'
@@ -6,6 +6,7 @@ import { DetalheContrato } from '../components/DetalheContrato'
 import { EstadoVazio } from '../components/EstadoVazio'
 import { FormNovoContrato } from '../components/FormNovoContrato'
 import { FormOportunidade } from '../components/FormOportunidade'
+import { ImportarCsv } from '../components/ImportarCsv'
 import { PilulaStatus } from '../components/Pilula'
 import { useEstado } from '../data/contexto'
 import { data, diasEntre, moeda } from '../lib/format'
@@ -61,6 +62,7 @@ export default function Carteira() {
   const [ordem, setOrdem] = useState<{ campo: CampoOrdem; asc: boolean }>({ campo: 'vencimento', asc: true })
   const [selecionado, setSelecionado] = useState<string | null>(null)
   const [novoContrato, setNovoContrato] = useState(false)
+  const [importando, setImportando] = useState(false)
   const [oportunidadePara, setOportunidadePara] = useState<string | null>(null)
   const [aviso, setAviso] = useState('')
 
@@ -135,6 +137,10 @@ export default function Carteira() {
   return (
     <>
       <Cabecalho titulo="Carteira" descricao={`${filtradas.length} de ${linhas.length} contratos`}>
+        <button type="button" className="btn btn-secundario" onClick={() => setImportando(true)}>
+          <Upload size={16} aria-hidden="true" />
+          Importar CSV
+        </button>
         <button type="button" className="btn btn-primario" onClick={() => setNovoContrato(true)}>
           <Plus size={16} aria-hidden="true" />
           Novo contrato
@@ -269,6 +275,7 @@ export default function Carteira() {
         />
       )}
       {novoContrato && <FormNovoContrato aoFechar={() => setNovoContrato(false)} />}
+      {importando && <ImportarCsv aoFechar={() => setImportando(false)} aoConcluir={setAviso} />}
       {oportunidadePara && (
         <FormOportunidade clienteId={oportunidadePara} aoFechar={() => setOportunidadePara(null)} aoSalvar={() => setAviso('Oportunidade criada no Funil.')} />
       )}

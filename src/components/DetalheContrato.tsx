@@ -53,7 +53,7 @@ export function DetalheContrato({ contrato, cliente, aoFechar, aoCriarOportunida
           <dl className="mt-1 divide-y divide-slate-100">
             <Linha rotulo="Elevadores">{contrato.qtdElevadores}</Linha>
             <Linha rotulo="Marca">{contrato.marca}</Linha>
-            <Linha rotulo="Ano do equipamento">{contrato.anoEquipamento}</Linha>
+            <Linha rotulo="Ano do equipamento">{contrato.anoEquipamento || 'Não informado'}</Linha>
             <Linha rotulo="Tipo">{ROTULO_TIPO_CONTRATO[contrato.tipo]}</Linha>
             <Linha rotulo="Valor mensal">{moeda(contrato.valorMensal)}</Linha>
             <Linha rotulo="Início">{data(contrato.inicio)}</Linha>
