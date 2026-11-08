@@ -13,9 +13,10 @@ export const porcentagem = (valor: number, casas = 0) => `${valor.toFixed(casas)
 
 /** Valor abreviado para eixos de gráfico: R$ 45 mil, R$ 1,2 mi. */
 export function moedaEixo(valor: number) {
-  if (Math.abs(valor) >= 1_000_000) return `R$ ${(valor / 1_000_000).toFixed(1).replace('.', ',')} mi`
-  if (Math.abs(valor) >= 1_000) return `R$ ${Math.round(valor / 1_000)} mil`
-  return `R$ ${Math.round(valor)}`
+  // Espaço não separável: o rótulo do eixo nunca quebra em duas linhas.
+  if (Math.abs(valor) >= 1_000_000) return `R$ ${(valor / 1_000_000).toFixed(1).replace('.', ',')} mi`
+  if (Math.abs(valor) >= 1_000) return `R$ ${Math.round(valor / 1_000)} mil`
+  return `R$ ${Math.round(valor)}`
 }
 
 const doisDigitos = (n: number) => String(n).padStart(2, '0')

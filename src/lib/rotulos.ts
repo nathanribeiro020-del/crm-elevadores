@@ -2,6 +2,7 @@ import type {
   EtapaFunil,
   GatilhoRegua,
   Origem,
+  PassoRegua,
   StatusContrato,
   StatusEdital,
   StatusEnvio,
@@ -51,6 +52,14 @@ export const ROTULO_GATILHO: Record<GatilhoRegua, string> = {
   dias_apos_vencimento: 'Dias após o vencimento',
   dias_apos_servico: 'Dias após o serviço',
   dias_sem_resposta_orcamento: 'Dias sem resposta do orçamento',
+}
+
+export function descreverPasso({ gatilho, dias }: Pick<PassoRegua, 'gatilho' | 'dias'>) {
+  const d = `${dias} ${dias === 1 ? 'dia' : 'dias'}`
+  if (gatilho === 'dias_antes_vencimento') return `${d} antes do vencimento`
+  if (gatilho === 'dias_apos_vencimento') return `${d} após o vencimento`
+  if (gatilho === 'dias_apos_servico') return `${d} após o serviço`
+  return `${d} sem resposta do orçamento`
 }
 
 export const ROTULO_EDITAL: Record<StatusEdital, string> = {

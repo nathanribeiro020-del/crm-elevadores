@@ -66,9 +66,11 @@ export default function Carteira() {
   const [oportunidadePara, setOportunidadePara] = useState<string | null>(null)
   const [aviso, setAviso] = useState('')
 
-  useEffect(() => {
+  const [statusUrlAnterior, setStatusUrlAnterior] = useState(statusUrl)
+  if (statusUrl !== statusUrlAnterior) {
+    setStatusUrlAnterior(statusUrl)
     setStatus(statusUrl)
-  }, [statusUrl])
+  }
 
   useEffect(() => {
     if (!aviso) return

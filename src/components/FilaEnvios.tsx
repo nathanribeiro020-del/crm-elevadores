@@ -2,20 +2,12 @@ import { RotateCcw, Send } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { useEstado } from '../data/contexto'
 import { filaDeHoje, type ItemFila } from '../lib/kpis'
-import { ROTULO_ENVIO } from '../lib/rotulos'
-import type { PassoRegua, StatusEnvio } from '../types'
+import { ROTULO_ENVIO, descreverPasso } from '../lib/rotulos'
+import type { StatusEnvio } from '../types'
 import { EstadoVazio } from './EstadoVazio'
 import { Pilula, type TomPilula } from './Pilula'
 
 const TOM_ENVIO: Record<StatusEnvio, TomPilula> = { fila: 'cinza', enviado: 'marca', respondido: 'verde' }
-
-export function descreverPasso({ gatilho, dias }: Pick<PassoRegua, 'gatilho' | 'dias'>) {
-  const d = `${dias} ${dias === 1 ? 'dia' : 'dias'}`
-  if (gatilho === 'dias_antes_vencimento') return `${d} antes do vencimento`
-  if (gatilho === 'dias_apos_vencimento') return `${d} após o vencimento`
-  if (gatilho === 'dias_apos_servico') return `${d} após o serviço`
-  return `${d} sem resposta do orçamento`
-}
 
 export function FilaEnvios({ aoVerPrevia }: { aoVerPrevia: (item: ItemFila) => void }) {
   const { estado, atualizar, hoje } = useEstado()

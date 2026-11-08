@@ -1,16 +1,17 @@
 import { Plus } from 'lucide-react'
-import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
+import { useMemo, useRef, useState, type FormEvent } from 'react'
 import { Cabecalho } from '../components/Cabecalho'
 import { Campo } from '../components/Campo'
 import { EditorPasso } from '../components/EditorPasso'
 import { EstadoVazio } from '../components/EstadoVazio'
-import { FilaEnvios, descreverPasso } from '../components/FilaEnvios'
+import { FilaEnvios } from '../components/FilaEnvios'
 import { Modal } from '../components/Modal'
 import { PreviaWhatsApp } from '../components/PreviaWhatsApp'
 import { useEstado } from '../data/contexto'
 import { novoId } from '../lib/format'
 import { proximosVencimentos, type ItemFila } from '../lib/kpis'
 import { useRota } from '../lib/rota'
+import { descreverPasso } from '../lib/rotulos'
 import { preencherMensagem } from '../lib/template'
 import type { PassoRegua, Segmento } from '../types'
 
@@ -33,9 +34,12 @@ export default function Regua() {
   const [periodicidade, setPeriodicidade] = useState('12')
   const blocoPrevia = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
+  // Ao chegar por um link "Ver régua" com a tela já aberta, a prévia troca para aquele cliente.
+  const [clienteUrlAnterior, setClienteUrlAnterior] = useState(clienteUrl)
+  if (clienteUrl !== clienteUrlAnterior) {
+    setClienteUrlAnterior(clienteUrl)
     if (clienteUrl) setClienteId(clienteUrl)
-  }, [clienteUrl])
+  }
 
   const segmento = estado.segmentos.find((s) => s.id === segmentoId) ?? estado.segmentos[0]
   const passos = segmento?.passos ?? []
